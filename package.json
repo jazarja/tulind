@@ -43,7 +43,8 @@
         "module_name": "tulind",
         "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
         "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-        "host": "https://github.com/jazarja/tulipnode/releases/download/",
-        "remote_path": "{version}"
+        "host": "https://github.com/jazarja/tulind/releases/download/",
+        "remote_path": "v{version}"
     }
 }
+
