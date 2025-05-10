@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main", "release" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main", "release" ]
 
 jobs:
   build:
@@ -67,7 +67,7 @@ jobs:
     name: Merge and Publish Binaries
     runs-on: ubuntu-latest
     needs: build
-    # if: github.event_name == 'push' && github.ref == 'refs/heads/master' && contains(github.event.commits[0].message, '[publish binary]')
+    if: github.ref == 'refs/heads/release'
 
     steps:
       - name: Checkout code
