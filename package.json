@@ -1,13 +1,13 @@
 {
     "author": "Lewis Van Winkle",
     "name": "tulind",
-    "version": "0.8.20",
+    "version": "0.9.21",
     "description": "Tulip Indicators Wrapper Providing Over 100 Technical Analysis Functions",
     "main": "index.js",
     "gypfile": true,
     "repository": {
         "type": "git",
-        "url": "git://github.com/TulipCharts/tulipnode"
+        "url": "https://github.com/jazarja/tulipnode.git"
     },
     "keywords": [
         "tulip",
@@ -30,17 +30,20 @@
         "minctest": "0.0.x"
     },
     "devDependencies": {
-        "aws-sdk": "2.x"
+        "aws-sdk": "2.x",
+        "chai": "4.4.1",
+        "mocha": "10.4.0"
     },
     "scripts": {
         "install": "node-pre-gyp install --fallback-to-build",
-        "test": "node test.js"
+        "package": "node-pre-gyp package",
+        "test": "mocha"
     },
     "binary": {
         "module_name": "tulind",
         "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
-        "remote_path": "./{module_name}/v{version}/{configuration}/",
         "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
-        "host": "https://tulipnode.s3.amazonaws.com"
+        "host": "https://github.com/jazarja/tulipnode/releases/download/",
+        "remote_path": "{version}"
     }
 }
