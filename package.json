@@ -1,7 +1,7 @@
 {
     "author": "Lewis Van Winkle",
     "name": "tulind",
-    "version": "0.9.21",
+    "version": "0.9.22",
     "description": "Tulip Indicators Wrapper Providing Over 100 Technical Analysis Functions",
     "main": "index.js",
     "gypfile": true,
@@ -26,11 +26,9 @@
     "dependencies": {
         "bindings": "^1.5.0",
         "nan": "^2.16.0",
-        "@mapbox/node-pre-gyp": "^1.0.5",
-        "minctest": "0.0.x"
+        "@mapbox/node-pre-gyp": "^1.0.5"
     },
     "devDependencies": {
-        "aws-sdk": "2.x",
         "chai": "4.4.1",
         "mocha": "10.4.0"
     },
@@ -44,7 +42,7 @@
         "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
         "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
         "host": "https://github.com/jazarja/tulind/releases/download/",
-        "remote_path": "v{version}"
+        "remote_path": "vpm{version}"
     }
 }
 

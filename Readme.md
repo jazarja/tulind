@@ -1,7 +1,3 @@
-[![Build Status](https://travis-ci.com/TulipCharts/tulipnode.svg?branch=master)](https://travis-ci.com/TulipCharts/tulipnode)
-[![Build Status](https://ci.appveyor.com/api/projects/status/ps9l8w7fxi81v2q5/branch/master?svg=true)](https://ci.appveyor.com/project/codeplea/tulipnode)
-[![npm](https://img.shields.io/npm/dw/tulind.svg)](https://www.npmjs.com/package/tulind)
-
 # Tulip Node
 
 Tulip Node is the official node.js wrapper for [Tulip
@@ -15,12 +11,24 @@ Oscillator, and many more.
 
 Installation should just be:
 
-``` js
+``` bash
 npm install tulind
 ```
 
-It should work on Windows, Os X, and Linux. Node version 10, 11, 12, 13, 14 (LTS),
-15 and 16 are tested and supported on each platform.
+### PNPM
+Since v10, pnpm doesn't run the lifecycle scripts of dependencies unless they are listed in onlyBuiltDependencies.
+
+Create pnpm-workspace.yaml in your project root
+```
+onlyBuiltDependencies:
+  - tulind 
+```
+
+``` bash
+pnpm install tulind
+```
+
+It should work on Windows and Linux. Node version 20, 22, 23, 24,
 
 Note that pre-compiled binaries are available for Windows. For other platforms
 you will need a C++ build environment installed. On Linux based distributions
@@ -28,7 +36,7 @@ this can be achieved by installing `build-essential` package.
 
 You can force building from source with:
 
-```js
+```bash
 npm install tulind --build-from-source
 ```
 
